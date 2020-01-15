@@ -22,4 +22,15 @@ public class HelloController {
         // 返回一个字符串 " success" 作为视图名称
         return "hello";
     }
+
+    //重定向
+    @RequestMapping(value = "/redirect")
+    public String redirect(){
+        return "redirect:finalPage";
+    }
+
+    @RequestMapping(value = "/finalPage")
+    public String finalPage(){
+        return "final";
+    }
 }
